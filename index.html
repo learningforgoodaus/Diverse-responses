@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Safety: Understanding Different Needs</title>
+    <!-- Tailwind CSS for layout structure -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Roboto for clean readability -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* BRAND COLOURS DEFINITION 
+           Light Purple: #C6B4D9
+           Deep Purple: #513873
+           Dark Purple: #413659
+           Off-White: #F2F2F2
+           Muted Mauve: #9C7F9D
+        */
+
+        :root {
+            --brand-deep-purple: #513873;
+            --brand-dark-purple: #413659;
+            --brand-light-purple: #C6B4D9;
+            --brand-mauve: #9C7F9D;
+            --brand-white: #F2F2F2;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--brand-white);
+            color: var(--brand-dark-purple);
+        }
+
+        /* Accordion Styling */
+        .accordion-item {
+            border-bottom: 2px solid var(--brand-light-purple);
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .accordion-header {
+            background-color: var(--brand-deep-purple);
+            color: white;
+            padding: 18px 24px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .accordion-header:hover {
+            background-color: var(--brand-dark-purple);
+        }
+
+        .accordion-header.active {
+            background-color: var(--brand-mauve);
+        }
+
+        /* Icon styling */
+        .icon {
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            color: var(--brand-light-purple);
+        }
+
+        .accordion-header.active .icon {
+            transform: rotate(45deg); /* Turns the + into an x */
+            color: white;
+        }
+
+        /* Content Panel Styling */
+        .panel {
+            padding: 0 24px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            border-left: 6px solid var(--brand-mauve);
+        }
+
+        .panel.open {
+            padding: 24px 24px;
+            border-bottom: 1px solid var(--brand-light-purple);
+        }
+
+        .panel h3 {
+            color: var(--brand-deep-purple);
+            margin-top: 0;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .panel ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .panel li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        /* Focus state for accessibility */
+        .accordion-header:focus {
+            outline: 2px solid var(--brand-light-purple);
+            outline-offset: -2px;
+        }
+
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-3xl mx-auto">
+        
+        <!-- Header Section -->
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl font-bold mb-4" style="color: var(--brand-deep-purple);">Understanding Different Needs</h1>
+            <p class="text-lg leading-relaxed max-w-2xl mx-auto" style="color: var(--brand-dark-purple);">
+                To build trust, we must respect the different backgrounds of the people we meet. Click on the headings below to learn how to support each group safely.
+            </p>
+        </header>
+
+        <!-- Accordion Container -->
+        <div class="accordion-container">
+
+            <!-- Item 1: Aboriginal Culture -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Aboriginal and Torres Strait Islander Culture</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="panel">
+                    <h3>Men's and Women's Business</h3>
+                    <p>In many First Nations cultures, some topics are private. This is based on gender.</p>
+                    <ul>
+                        <li><strong>The Challenge:</strong> A man (whether a customer, patron, or colleague) might not feel comfortable talking about personal family matters with a female worker. Similarly, a woman might not talk to a male worker.</li>
+                        <li><strong>What to do:</strong> This is not them being difficult. It is a sign of respect for their culture. Always ask if they would prefer to speak to someone of the same gender.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Item 2: LGBTQAI+ -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>LGBTQAI+ People (Sexuality and Gender)</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="panel">
+                    <h3>Fear of Judgement</h3>
+                    <p>People who identify as LGBTQAI+ may worry that you will judge their relationship or identity.</p>
+                    <ul>
+                        <li><strong>The Challenge:</strong> They might fear you will say their relationship is not "real" or that they deserve the abuse because of their lifestyle.</li>
+                        <li><strong>What to do:</strong> Do not assume everyone is heterosexual (straight). Use the words <em>they</em> use to describe their partner. Show them respect for who they are.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Item 3: Religious Beliefs -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Religious Beliefs</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="panel">
+                    <h3>Faith and Family</h3>
+                    <p>Religion can shape how a person sees marriage, family, and violence.</p>
+                    <ul>
+                        <li><strong>The Challenge:</strong> A person might feel that leaving a marriage is a sin against their religion, even if they are being hurt. They might fear you will tell them to break their religious rules.</li>
+                        <li><strong>What to do:</strong> Respect their faith. Listen to how their religion affects their choices. Do not tell them their religion is "wrong."</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Item 4: Older People -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Older People</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="panel">
+                    <h3>Independence and Dignity</h3>
+                    <p>Older people grew up in a time when family issues were kept very private.</p>
+                    <ul>
+                        <li><strong>The Challenge:</strong> They might feel shame about abuse. They are often afraid that if they speak up, they will lose their independence and be forced into a nursing home.</li>
+                        <li><strong>What to do:</strong> Be patient and respectful (consider using titles like Mr. or Mrs.). Assure them that your goal is to help them feel safe, not to control their life.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Item 5: Young People and Children -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Young People and Children</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="panel">
+                    <h3>Trust and Authority</h3>
+                    <p>Young people are often wary of adults in positions of power.</p>
+                    <ul>
+                        <li><strong>The Challenge:</strong> They might worry that if they tell the truth, they will get in trouble or be separated from their family. They may not know the right words to use.</li>
+                        <li><strong>What to do:</strong> Listen to them seriously. Do not dismiss their feelings just because they are young. Speak simply and honestly about how you can help.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript for Interaction -->
+    <script>
+        // Select all accordion headers
+        const acc = document.getElementsByClassName("accordion-header");
+
+        for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                // Toggle the "active" class on the clicked header
+                this.classList.toggle("active");
+
+                // Get the panel (the next sibling element)
+                const panel = this.nextElementSibling;
+
+                // Logic to expand or collapse
+                if (panel.style.maxHeight) {
+                    // If open, close it
+                    panel.style.maxHeight = null;
+                    panel.classList.remove("open");
+                } else {
+                    // If closed, open it
+                    // Optional: Close other panels first (Accordion behavior)
+                    closeAllPanels(); 
+                    this.classList.add("active"); // Re-add active to current
+                    
+                    panel.classList.add("open");
+                    // Adding a small buffer (+50px) prevents text cutoff due to padding transitions
+                    panel.style.maxHeight = (panel.scrollHeight + 50) + "px";
+                }
+            });
+        }
+
+        // Helper function to close all panels (Exclusive Accordion)
+        // If you want multiple panels open at once, remove the call to this function in the click event above.
+        function closeAllPanels() {
+            const allPanels = document.getElementsByClassName("panel");
+            const allHeaders = document.getElementsByClassName("accordion-header");
+            
+            for (let i = 0; i < allPanels.length; i++) {
+                allPanels[i].style.maxHeight = null;
+                allPanels[i].classList.remove("open");
+                allHeaders[i].classList.remove("active");
+            }
+        }
+    </script>
+</body>
+</html>
